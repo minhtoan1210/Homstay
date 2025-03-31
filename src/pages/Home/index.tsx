@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <>
-      <h1>Minh toàn</h1>
+      <h1 className="text-[20px]">Minh toàn</h1>
     </>
   );
 };
