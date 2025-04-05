@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <>
-      <h1 className="text-[20px]">Minh toàn heaaa</h1>
+      <h1 className="text-[20px]">Minh toàn hehe</h1>
       <ComponentTable />
       <div>
     </div>
