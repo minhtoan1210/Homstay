@@ -16,6 +16,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: 22
         script: |
+          set -x
           cd /root/homestay_fe/Homstay
           git fetch origin
           git checkout main
