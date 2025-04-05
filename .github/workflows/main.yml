@@ -19,7 +19,11 @@ jobs:
           cd /root/homestay_fe/Homstay
           git fetch origin
           git checkout main
+          git reset --hard HEAD
           git pull
           npm install
           npm run build
           pm2 reload homestay
+          /root/.nvm/versions/node/v23.11.0/bin/npm
+          /root/.nvm/versions/node/v23.11.0/bin/pm2
+          /root/.nvm/versions/node/v23.11.0/bin/node
