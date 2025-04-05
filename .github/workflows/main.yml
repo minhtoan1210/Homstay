@@ -16,6 +16,9 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: 22
         script: |
+           export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \.
+          nvm use 23.11.0
           cd /root/homestay_fe/Homstay
           git fetch origin
           git checkout main
