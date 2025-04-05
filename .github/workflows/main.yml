@@ -2,7 +2,7 @@ name: Next Deployment
 
 on:
   push:
-    branches: [demo]
+    branches: [main]
 
 jobs:
   deploy:
@@ -18,7 +18,7 @@ jobs:
         script: |
           cd /root/homestay_fe/Homstay
           git fetch origin
-          git checkout demo
+          git checkout main
           git pull
           npm install
           npm run build
