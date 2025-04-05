@@ -16,14 +16,23 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: 22
         script: |
+          set -x
+          export NVM_DIR="$HOME/.nvm"  # Đảm bảo nvm được cài đúng đường dẫn
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Nạp nvm
+          nvm install 23.11.0  # Cài đặt phiên bản Node.js nếu chưa có
+          nvm use 23.11.0  # Sử dụng phiên bản Node.js
+          
+          # Kiểm tra lại node, npm và pm2
+          echo "Node version: $(node -v)"
+          echo "NPM version: $(npm -v)"
+          echo "PM2 version: $(pm2 -v)"
+          
+          # Quá trình deploy
           cd /root/homestay_fe/Homstay
           git fetch origin
           git checkout main
           git reset --hard HEAD
           git pull
-          npm install
+          npm install --legacy-peer-deps
           npm run build
           pm2 reload homestay
-          /root/.nvm/versions/node/v23.11.0/bin/npm
-          /root/.nvm/versions/node/v23.11.0/bin/pm2
-          /root/.nvm/versions/node/v23.11.0/bin/node
