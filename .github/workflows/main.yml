@@ -24,3 +24,5 @@ jobs:
           npm install
           npm run build
           pm2 reload homestay
+          /root/.nvm/versions/node/v23.11.0/bin/npm
+          /root/.nvm/versions/node/v23.11.0/bin/pm2
