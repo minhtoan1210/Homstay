@@ -26,3 +26,4 @@ jobs:
           pm2 reload homestay
           /root/.nvm/versions/node/v23.11.0/bin/npm
           /root/.nvm/versions/node/v23.11.0/bin/pm2
+          /root/.nvm/versions/node/v23.11.0/bin/node
