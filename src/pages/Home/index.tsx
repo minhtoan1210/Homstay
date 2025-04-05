@@ -1,4 +1,5 @@
 import { useDemoQuery } from "@/queries/demo";
+import ComponentTable from "./componentTable";
 
 const Home = () => {
   const demoQuery = useDemoQuery()
@@ -8,6 +9,9 @@ const Home = () => {
   return (
     <>
       <h1 className="text-[20px]">Minh toàn hehe</h1>
+      <ComponentTable />
+      <div>
+    </div>
     </>
   );
 };
